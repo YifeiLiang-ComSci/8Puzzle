@@ -36,6 +36,7 @@ public class PuzzleChecker {
         for (String filename : args) {
 
             // read in the board specified in the filename
+            System.out.println("asdasd");
             In in = new In(filename);
             int n = in.readInt();
             int[][] tiles = new int[n][n];
@@ -47,6 +48,8 @@ public class PuzzleChecker {
 
             // solve the slider puzzle
             Board initial = new Board(tiles);
+            System.out.println("Hi");
+            initial.twin();
             Solver solver = new Solver(initial);
             StdOut.println(filename + ": " + solver.moves());
         }
